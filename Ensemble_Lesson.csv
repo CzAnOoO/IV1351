@@ -1,0 +1,11 @@
+lesson_type,skill_level,time_slot_id,genre,max_students,min_students
+ensemble,beginner,6,mystery,20,5
+ensemble,beginner,12,drama,23,5
+ensemble,intermediate,21,thriller,20,5
+ensemble,beginner,16,documentary,26,4
+ensemble,beginner,18,documentary,18,5
+ensemble,advanced,20,fantasy,17,3
+ensemble,beginner,14,drama,27,4
+ensemble,advanced,21,comedy,16,3
+ensemble,beginner,13,action,24,5
+ensemble,intermediate,24,thriller,15,5
