@@ -11,10 +11,10 @@ The database management system used is `PostgreSQL`, with interaction through ps
 
 If using `psql` as the database management tool, navigate to the directory where the  `main.sql`  file is located and open the terminal, then execute the following commands:
 
-`psql -U <username> -d postgres`
-`CREATE DATABASE <database name>;`
-`\c <database name>`
-`\I main.sql`
+`psql -U <username> -d postgres`  
+`CREATE DATABASE <database name>;`  
+`\c <database name>`  
+`\I main.sql`  
 
 ## File Structure
 `main.sql`  is the main file, which primarily contains the database creation scripts, including creating various tables and invoking other necessary scripts, such as  `inserts_data.sql`. The purpose is to allow users to simply execute this file after cloning the files from GitHub to their local environment to set up the database.
@@ -23,7 +23,7 @@ The script for inserting data is  `inserts_data.sql`, which shows which tables i
 
 ## Team Members
 
-[Chen Zhengan, zhenganc@ug.kth.se]
-[Jacob Polanco Johansson, jacobpj@ug.kth.se] 
+[Chen Zhengan, zhenganc@ug.kth.se]  
+[Jacob Polanco Johansson, jacobpj@ug.kth.se]   
 
 
