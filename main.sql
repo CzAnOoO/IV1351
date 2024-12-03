@@ -88,8 +88,8 @@ CREATE TABLE "Instructor_lesson_assignment" (
 
 CREATE TABLE "Price_List" (
   "list_id" serial NOT NULL,
-  "lesson_type" lesson_type NOT NULL,
-  "skill_level" skill_level NOT NULL,
+  "lesson_type" lesson_type,
+  "skill_level" skill_level,
   "price" float NOT NULL,
   "start_date" date NOT NULL,
   "end_date" date,
