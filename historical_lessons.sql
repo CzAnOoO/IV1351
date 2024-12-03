@@ -53,31 +53,30 @@ WHERE
 
 
 \i historical_lessons.sql 
-INSERT 0 69
+INSERT 0 63
 
 --Check inserted data--
 SELECT * FROM "Historical_Lessons" WHERE "lesson_type"= 'ensemble' limit 3;
-test=# SELECT * FROM "Historical_Lessons" WHERE "lesson_type"= 'ensemble' limit 3;
- history_id | lesson_type | genre | instrument | lesson_price |     student_name      |       student_email       |    date    
-------------+-------------+-------+------------+--------------+-----------------------+---------------------------+------------
-         23 | ensemble    | drama |            |           30 | Lefty Camelli         | dantonov5v@newyorker.com  | 2024-03-03
-         24 | ensemble    | drama |            |           30 | Travis Tithacott      | snekrewsb7@i2i.jp         | 2024-03-30
-         25 | ensemble    | drama |            |           30 | Casandra Bestwerthick | cpanchincj@opensource.org | 2024-05-12
+ history_id | lesson_type | genre  | instrument | lesson_price |    student_name    |       student_email        |    date    
+------------+-------------+--------+------------+--------------+--------------------+----------------------------+------------
+         45 | ensemble    | action |            |           30 | Marline Sybe       | pscougallcr@guardian.co.uk | 2024-05-02
+         46 | ensemble    | comedy |            |           80 | Arther Dymond      | gwoolfendence@google.nl    | 2023-08-12
+         47 | ensemble    | comedy |            |           80 | Blondy Wintersgill | rlumpkin8y@booking.com     | 2024-07-01
 (3 rows)
 
 SELECT * FROM "Historical_Lessons" WHERE "lesson_type"= 'group' limit 3;
- history_id | lesson_type | genre | instrument | lesson_price |     student_name      |      student_email      |    date    
-------------+-------------+-------+------------+--------------+-----------------------+-------------------------+------------
-         17 | group       |       | guitar     |           20 | Antonietta Bladesmith | kgouleyy@lycos.com      | 2024-02-22
-         18 | group       |       | guitar     |           20 | Leland Brundle        | lcragell3v@unicef.org   | 2024-03-02
-         19 | group       |       | trumpet    |           20 | Barbee Erickssen      | bjakoviljevic4h@mail.ru | 2024-05-13
+ history_id | lesson_type | genre | instrument | lesson_price |  student_name   |          student_email           |    date    
+------------+-------------+-------+------------+--------------+-----------------+----------------------------------+------------
+         17 | group       |       | accordion  |           60 | Andy Grinnell   | krawles6u@loc.gov                | 2024-05-23
+         18 | group       |       | accordion  |           60 | Lukas Greig     | bcongreve7o@discuz.net           | 2023-11-26
+         19 | group       |       | accordion  |           60 | Sawyere Goodman | wcallicott19@businessinsider.com | 2023-07-07
 (3 rows)
 
-SELECT * FROM "Historical_Lessons" WHERE "lesson_type"= 'individual' limit 3;
+test=# SELECT * FROM "Historical_Lessons" WHERE "lesson_type"= 'individual' limit 3;
  history_id | lesson_type | genre | instrument | lesson_price |   student_name    |      student_email       |    date    
 ------------+-------------+-------+------------+--------------+-------------------+--------------------------+------------
-          1 | individual  |       | drums      |          130 | Iggy Aston        | gpeotz78@examiner.com    | 2024-08-22
-          2 | individual  |       | drums      |          150 | Iggy Aston        | gpeotz78@examiner.com    | 2024-08-22
+          1 | individual  |       | accordion  |          130 | Alyosha Maps      | nrodenburghj@salon.com   | 2023-07-20
+          2 | individual  |       | accordion  |          150 | Alyosha Maps      | nrodenburghj@salon.com   | 2023-07-20
           3 | individual  |       | banjo      |           50 | Natalina Tinghill | vcuphus2u@eventbrite.com | 2023-06-22
 (3 rows)
  */
