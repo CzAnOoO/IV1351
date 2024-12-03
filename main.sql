@@ -149,9 +149,11 @@ CREATE TABLE "Instrument" (
 );
 
 CREATE TABLE "Siblings_linked_list" (
+  "student_id" int NOT NULL,
   "sibling_id" int NOT NULL,
-  "next_sibling_id" int NOT NULL
-  ON DELETE CASCADE
+    CONSTRAINT fk_sibling
+    FOREIGN KEY ("student_id") REFERENCES "Student"("student_id")
+    ON DELETE CASCADE
 );
 
 CREATE TABLE "instructor_unavalible_timeslots" (
@@ -170,9 +172,8 @@ CREATE TABLE "Historical_Lessons" (
   "student_name" varchar(30) NOT NULL,
   "student_email" varchar(40) NOT NULL,
   "date" date NOT NULL,
-  CONSTRAINT unique_lesson_student UNIQUE ("lesson_type", "student_email", "date");
-
+  CONSTRAINT unique_historical_lesson UNIQUE ("lesson_type", "genre", "instrument", "student_email", "date")
 );
 
-\ i inserts_data.sql;
-\ i historical_lessons.sql;
+\i inserts_data.sql;
+\i historical_lessons.sql;

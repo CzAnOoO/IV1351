@@ -8,7 +8,7 @@ INSERT INTO
         student_email,
         date
     )
-SELECT
+SELECT DISTINCT
     CASE
         WHEN l.lesson_type = 'ensemble' THEN 'ensemble'::lesson_type
         WHEN l.lesson_type = 'group' THEN 'group'::lesson_type
@@ -37,8 +37,21 @@ FROM
     JOIN "Price_List" p ON l.lesson_type = p.lesson_type
     AND l.skill_level = p.skill_level
 WHERE
-    b.status = 'completed';
+    b.status = 'completed'
+/*     AND NOT EXISTS (
+        SELECT 1
+        FROM "Historical_Lessons" h
+        WHERE h.lesson_type = CASE 
+                                WHEN l.lesson_type = 'ensemble' THEN 'ensemble'::lesson_type
+                                WHEN l.lesson_type = 'group' THEN 'group'::lesson_type
+                                WHEN l.lesson_type = 'individual' THEN 'individual'::lesson_type
+                              END
+          AND h.student_email = s.mail
+          AND h.date = b.date
+    ); */
 /* 
+
+
 \i historical_lessons.sql 
 INSERT 0 69
 

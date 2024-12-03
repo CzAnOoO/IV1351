@@ -18,4 +18,4 @@
 
 \copy "Instructor_lesson_assignment" ("instructor_id", "lesson_id", "date", "status") FROM 'data/Instructor_lesson_assignment.csv' DELIMITER ',' CSV HEADER; 
 
-\copy "Siblings_linked_list" ("sibling_id", "next_sibling_id") FROM 'data/Siblings.csv' DELIMITER ',' CSV HEADER;
+\copy "Siblings_linked_list" ("student_id", "sibling_id") FROM 'data/Siblings.csv' DELIMITER ',' CSV HEADER;

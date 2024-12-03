@@ -16,9 +16,9 @@ JOIN "Time_slot" ts
 JOIN "Student_lesson_booking" sl
     ON e.lesson_id = sl.lesson_id
 
--- It should be: (8 - EXTRACT(DOW FROM CURRENT_DATE))::INT
-WHERE ts.date >= CURRENT_DATE + (8 - EXTRACT(DOW FROM DATE '2024-12-02'))::INT -- Start from next Monday 
-  AND ts.date < CURRENT_DATE + (15 - EXTRACT(DOW FROM DATE '2024-12-02'))::INT -- Include up to next Sunday
+-- It should be: CURRENT_DATE + (8 - EXTRACT(DOW FROM CURRENT_DATE))::INT
+WHERE ts.date >= DATE '2024-12-02' + (8 - EXTRACT(DOW FROM DATE '2024-12-02'))::INT -- Start from next Monday 
+  AND ts.date < DATE '2024-12-02' + (15 - EXTRACT(DOW FROM DATE '2024-12-02'))::INT -- Include up to next Sunday
 GROUP BY e.lesson_id, e.genre, ts.date, e.max_students
 ORDER BY e.genre, ts.date;
 /* 
