@@ -1,4 +1,5 @@
 /* TABLE 1*/
+CREATE VIEW tabel_1 AS
 SELECT
 TO_CHAR(TO_DATE(EXTRACT(MONTH FROM "date")::text, 'MM'),
 'FMMonth') AS "Month",
@@ -14,7 +15,7 @@ GROUP BY EXTRACT(MONTH FROM "date")
 ORDER BY EXTRACT(MONTH FROM "date");
 
 /* 
-test=# \i task3_1.sql
+test=# SELECT * FROM tabel_1;
   Month   | Total | Individual | Group | Ensemble 
 ----------+-------+------------+-------+----------
  November |    21 |         10 |     7 |        4

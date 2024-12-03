@@ -1,4 +1,5 @@
 /* TABLE 2 */
+CREATE VIEW tabel_2 AS
 SELECT 
     "num_of_siblings" AS "No of Siblings",
     COUNT(*) AS "No of Students"
@@ -15,11 +16,13 @@ SELECT
     (SELECT COUNT(DISTINCT "sibling_id") FROM "Siblings_linked_list") AS "No of Students"
 ORDER BY "No of Siblings";
 /* 
+test=# SELECT * FROM tabel_2;
  No of Siblings | No of Students 
 ----------------+----------------
+              0 |            480
               1 |              6
               2 |              9
               4 |              5
-(3 rows)
+(4 rows)
 
  */

@@ -1,4 +1,5 @@
 /* TABLE 3 */
+CREATE VIEW tabel_3 AS
 SELECT i.instructor_id, i.name, COUNT(l.lesson_id) AS lesson_count
 FROM "Instructor" i
 JOIN "Instructor_lesson_assignment" ila
@@ -14,11 +15,12 @@ HAVING COUNT(l.lesson_id) > 2  -- COUNT(l.lesson_id) > specific_number
 ORDER BY lesson_count DESC;
 
 /*  
-instructor_id | name | lesson_count 
+test=# SELECT * FROM tabel_3;
+ instructor_id | name | lesson_count 
 ---------------+------+--------------
             24 | Odey |            4
             20 | Hew  |            3
-(2 rows) 
+(2 rows)
 
 SELECT * FROM "Instructor_lesson_assignment" AS i WHERE i.instructor_id=24; 
  assignment_id | instructor_id | lesson_id |    date    |  status   

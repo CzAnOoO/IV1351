@@ -1,4 +1,5 @@
 /* TABLE 4 */
+CREATE VIEW tabel_4 AS
 SELECT 
     -- If you need to verify whether the query is correct, you can remove the gaze here.
     -- e.lesson_id,
@@ -22,7 +23,7 @@ WHERE ts.date >= DATE '2024-12-02' + (8 - EXTRACT(DOW FROM DATE '2024-12-02'))::
 GROUP BY e.lesson_id, e.genre, ts.date, e.max_students
 ORDER BY e.genre, ts.date;
 /* 
-test=# \i task3_4.sql
+test=# SELECT * FROM tabel_4;
  lesson_id |    date    |  weekday  |                       genre                        | booking_status  
 -----------+------------+-----------+----------------------------------------------------+-----------------
         57 | 2024-12-13 | Friday    | drama                                              | Fully booked

@@ -177,3 +177,7 @@ CREATE TABLE "Historical_Lessons" (
 
 \i inserts_data.sql;
 \i historical_lessons.sql;
+\i task3_1.sql
+\i task3_2.sql
+\i task3_3.sql
+\i task3_4.sql
