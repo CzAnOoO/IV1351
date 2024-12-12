@@ -19,3 +19,9 @@
 \copy "Instructor_lesson_assignment" ("instructor_id", "lesson_id", "date", "status") FROM 'data/Instructor_lesson_assignment.csv' DELIMITER ',' CSV HEADER; 
 
 \copy "Siblings_linked_list" ("student_id", "sibling_id") FROM 'data/Siblings.csv' DELIMITER ',' CSV HEADER;
+
+\copy "Instrument" ("instrument_type", "brand", "price_per_month", "store_number") FROM 'data/Instrument.csv' DELIMITER ',' CSV HEADER;
+
+\copy "Instrument_rental" ("student_id", "instrument_id", "start_date", "end_date", "rental_status") FROM 'data/Instrument_rental.csv' DELIMITER ',' CSV HEADER;
+
+INSERT INTO config (config_key, config_value) VALUES ('max_instruments_per_student', 2);

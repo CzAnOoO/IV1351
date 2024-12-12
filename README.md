@@ -23,7 +23,7 @@ The script for inserting data is  `inserts_data.sql`, which shows which tables i
 
 ## Team Members
 
-[Chen Zhengan, zhenganc@ug.kth.se]  
+[Zhengan Chen, zhenganc@ug.kth.se]  
 [Jacob Polanco Johansson, jacobpj@ug.kth.se]   
 
 

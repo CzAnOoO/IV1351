@@ -163,6 +163,11 @@ CREATE TABLE "instructor_unavalible_timeslots" (
   CONSTRAINT "FK_instructor_unavalible_timeslots.time_slot_id" FOREIGN KEY ("time_slot_id") REFERENCES "Time_slot"("time_slot_id")
 );
 
+CREATE TABLE config (
+config_key VARCHAR(255) PRIMARY KEY, 
+config_value int
+);
+
 CREATE TABLE "Historical_Lessons" (
   "history_id" serial PRIMARY KEY,
   "lesson_type" lesson_type NOT NULL,
@@ -176,8 +181,8 @@ CREATE TABLE "Historical_Lessons" (
 );
 
 \i inserts_data.sql;
-\i historical_lessons.sql;
-\i task3_1.sql
-\i task3_2.sql
-\i task3_3.sql
-\i task3_4.sql
+\i task_3/historical_lessons.sql;
+\i task_3/task3_1.sql
+\i task_3/task3_2.sql
+\i task_3/task3_3.sql
+\i task_3/task3_4.sql

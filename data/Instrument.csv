@@ -1,4 +1,4 @@
-instrument,brand,price_per_month,store_number
+instrument_type,brand,price_per_month,store_number
 banjo,Star Drums,373,48
 piano,Harmony Keyboards,969,71
 mandolin,Velocity Percussion,740,70
