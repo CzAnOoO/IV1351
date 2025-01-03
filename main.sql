@@ -105,29 +105,6 @@ CREATE TABLE "instructor_avalible_instruments" (
   CONSTRAINT "FK_instructor_avalible_instruments.instructor_id" FOREIGN KEY ("instructor_id") REFERENCES "Instructor"("instructor_id")
 );
 
-CREATE TABLE "Instructor_payment" (
-  "receipt_id" serial,
-  "instructor_id" Int NOT NULL,
-  "year" date NOT NULL,
-  "month" smallint NOT NULL,
-  "total_amount" float NOT NULL,
-  "payment_status" bool NOT NULL,
-  PRIMARY KEY ("receipt_id"),
-  CONSTRAINT "FK_Instructor_payment.instructor_id" FOREIGN KEY ("instructor_id") REFERENCES "Instructor"("instructor_id")
-);
-
-CREATE TABLE "Student_payment" (
-  "invoice _id" Serial,
-  "student_id" Int NOT NULL,
-  "year" date NOT NULL,
-  "month" smallint NOT NULL,
-  "total_amount" float NOT NULL,
-  "sibling_discount" float,
-  "payment_status" bool NOT NULL,
-  PRIMARY KEY ("invoice _id"),
-  CONSTRAINT "FK_Student_payment.student_id" FOREIGN KEY ("student_id") REFERENCES "Student"("student_id")
-);
-
 CREATE TABLE "Instrument_rental" (
   "rental_id" serial NOT NULL,
   "student_id" Int NOT NULL,

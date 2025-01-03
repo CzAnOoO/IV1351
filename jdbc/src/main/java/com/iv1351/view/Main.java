@@ -57,8 +57,10 @@ public class Main {
                         System.out.println("_________________________________");
                         System.out.print("\nEnter rental ID: ");
                         int rentalId = scanner.nextInt();
+                        System.out.print("\nEnter store number for returned instrument: "); 
+                        int storeNumber = scanner.nextInt();
                         try {
-                            controller.terminateRental(rentalId);
+                            controller.terminateRental(rentalId, storeNumber);
                             System.out.println("\nRental terminated successfully.");
                         } catch (RentalException e) {
                             System.out.println(e.getMessage());
