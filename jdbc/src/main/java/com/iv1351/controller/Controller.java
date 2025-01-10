@@ -23,7 +23,7 @@ public class Controller {
     // 1. List instruments
     public List<Instrument> listAvailableInstruments(String type) throws SQLException { 
         try { 
-            connection.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED); 
+            // connection.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED); 
             connection.setAutoCommit(false); 
             List<Instrument> instruments = instrumentDAO.listAvailableInstruments(type); 
             connection.commit(); 
@@ -39,7 +39,7 @@ public class Controller {
     // 2. Rent instrument
     public boolean rentInstrument(int studentId, int instrumentId) throws SQLException, RentalException {
         try {
-            connection.setTransactionIsolation(Connection.TRANSACTION_REPEATABLE_READ);
+            // connection.setTransactionIsolation(Connection.TRANSACTION_REPEATABLE_READ);
             connection.setAutoCommit(false);
 
             // Lock 
@@ -67,7 +67,7 @@ public class Controller {
                 * System.out.println("\n!!A student can only rent a maximum of " +
                 * maxInstruments + " instruments at the same time.");
                 * return false;
-                 */
+                */
                 throw new RentalException("\n !!A student can only rent a maximum of " + maxInstruments + " instruments at the same time.");
             }
             boolean isRented = instrumentDAO.isInstrumentRented(instrumentId);
@@ -96,7 +96,7 @@ public class Controller {
     // 3. Terminate rental
     public boolean terminateRental(int rentalId, int storeNumber) throws SQLException, RentalException {
         try {
-            connection.setTransactionIsolation(Connection.TRANSACTION_REPEATABLE_READ);
+            // connection.setTransactionIsolation(Connection.TRANSACTION_REPEATABLE_READ);
             connection.setAutoCommit(false);
 
             // Lock 
